@@ -23,7 +23,7 @@ if [ -n "$VERSION" ]; then
 fi
 
 ver=$(cat vers.txt)
-gitver=$(curl --connect-timeout 10 -m 20 -k -s https://api.github.com/repos/immisterio/Lampac/releases/latest | grep tag_name | sed s/[^0-9]//g)
+gitver=$(curl --connect-timeout 10 -m 20 -k -s https://api.github.com/repos/Sheripov/Lampac/releases/latest | grep tag_name | sed s/[^0-9]//g)
 if [ $gitver -gt $ver ]; then
     echo "update lampac to version $gitver"
     rm -f update.zip
